@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "318285241545",
+    "firebase_url": "https://aanaxee-28fff-default-rtdb.firebaseio.com",
+    "project_id": "aanaxee-28fff",
+    "storage_bucket": "aanaxee-28fff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318285241545:android:7a5ff296e6895403ed4118",
+        "android_client_info": {
+          "package_name": "com.example.aanaxee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318285241545-rhlgfc6h84ntiibg4h2rjl56flci89nk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aanaxee",
+            "certificate_hash": "a0d5667fc7ff8dc816420456171bb361d379476c"
+          }
+        },
+        {
+          "client_id": "318285241545-3gnpp830m5ppqr2shlepnrnur6hsr8cf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv7rw6WzbkMmekYdeJIAtliR7xFFzB9GA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318285241545-3gnpp830m5ppqr2shlepnrnur6hsr8cf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

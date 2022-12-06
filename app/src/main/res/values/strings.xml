@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aanaxee</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">navigation drawer close</string>
+    <string name="submit">SUBMIT</string>
+    <string name="file_save_error">file_save_error</string>
+    <string name="camera_unavailable">camera_unavailable</string>
+</resources>
