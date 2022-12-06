@@ -107,8 +107,10 @@
             <LinearLayout
                 android:id="@+id/l1"
                 android:layout_width="0dp"
+                android:background="#1DE9B6"
                 android:layout_height="175dp"
                 android:layout_marginStart="8dp"
+
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:orientation="horizontal"
@@ -122,6 +124,7 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
+                    app:cardCornerRadius="20dp"
                     android:layout_weight="1"
                     app:cardBackgroundColor="#008000">
 
@@ -156,6 +159,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
                     app:cardBackgroundColor="#FF0000">
 
                     <RelativeLayout
@@ -204,6 +208,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
                     app:cardBackgroundColor="#FEFF00">
 
                     <RelativeLayout
@@ -238,6 +243,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
                     app:cardBackgroundColor="#0000FF">
 
                     <RelativeLayout
@@ -289,7 +295,7 @@
                 android:layout_width="0dp"
                 android:layout_height="175dp"
                 android:layout_marginTop="8dp"
-
+                android:background="#BBF6F6"
                 android:orientation="horizontal"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -300,6 +306,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
+                    app:cardCornerRadius="20dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
@@ -337,6 +344,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
                     app:cardBackgroundColor="@color/teal_700">
 
                     <RelativeLayout
@@ -373,6 +381,7 @@
                 android:layout_height="175dp"
                 android:orientation="horizontal"
                 android:padding="10dp"
+                android:background="#BBF6F6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -384,6 +393,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
                     app:cardBackgroundColor="@color/teal_700">
 
                     <RelativeLayout
@@ -418,6 +428,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
                     app:cardBackgroundColor="#FF6AE3D7">
 
                     <RelativeLayout
@@ -454,6 +465,7 @@
                 android:layout_height="175dp"
                 android:orientation="horizontal"
                 android:padding="10dp"
+                android:background="#BBF6F6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -465,6 +477,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
                     app:cardBackgroundColor="#FF6AE3D7">
 
                     <RelativeLayout
@@ -499,6 +512,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
                     app:cardBackgroundColor="@color/teal_700">
 
                     <RelativeLayout

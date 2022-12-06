@@ -26,6 +26,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -81,6 +85,7 @@ public class SignUpActivity extends AppCompatActivity {
             rootNode = FirebaseDatabase.getInstance();
             reference = rootNode.getReference("User");
 
+            saveUser(createHelperClass());
 
             String name = Objects.requireNonNull(regName.getEditText()).getText().toString();
             String username = Objects.requireNonNull(regUsername.getEditText()).getText().toString();
@@ -110,6 +115,36 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
+
+    public UserHelperClass createHelperClass(){
+        UserHelperClass userHelperClass = new UserHelperClass();
+        userHelperClass.setName(regName.getEditText().getText().toString());
+        userHelperClass.setUsername(regUsername.getEditText().getText().toString());
+        userHelperClass.setEmail(regEmail.getEditText().getText().toString());
+        userHelperClass.setPhoneNo(regPhone.getEditText().getText().toString());
+        userHelperClass.setPassword(regPassword.getEditText().getText().toString());
+        return userHelperClass;
+    }
+
+    public void saveUser(UserHelperClass userHelperClass){
+        Call<UserResponse> userResponseCall = ApiClient.getUserServies().saveUser(userHelperClass);
+        userResponseCall.enqueue(new Callback<UserResponse>() {
+            @Override
+            public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
+                if (response.isSuccessful()){
+                    Toast.makeText(SignUpActivity.this, "Saved Successfully", Toast.LENGTH_SHORT).show();
+                }else
+                    Toast.makeText(SignUpActivity.this, "Request Failed", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<UserResponse> call, Throwable t) {
+                Toast.makeText(SignUpActivity.this, "Request Failed"+t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
 
     private boolean validationName() {
         String val = Objects.requireNonNull(regName.getEditText()).getText().toString();
