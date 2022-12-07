@@ -101,7 +101,6 @@ public class SignUpActivity extends AppCompatActivity {
                 UserHelperClass helperClass = new UserHelperClass(name, username, email, phone, password);
                 reference.child(username).setValue(helperClass);
 
-
                 //Data is Store in SqualiteDB................
                 boolean inserted = dbHandler.addNewUser(name, username, email, phone, password);
                 if (inserted)
@@ -111,23 +110,23 @@ public class SignUpActivity extends AppCompatActivity {
                 regEmail.getEditText().setText("");
                 regPhone.getEditText().setText("");
                 regPassword.getEditText().setText("");
-
             }
         });
     }
 
-    public UserHelperClass createHelperClass(){
-        UserHelperClass userHelperClass = new UserHelperClass();
-        userHelperClass.setName(regName.getEditText().getText().toString());
-        userHelperClass.setUsername(regUsername.getEditText().getText().toString());
-        userHelperClass.setEmail(regEmail.getEditText().getText().toString());
-        userHelperClass.setPhoneNo(regPhone.getEditText().getText().toString());
-        userHelperClass.setPassword(regPassword.getEditText().getText().toString());
-        return userHelperClass;
+    //data is store in API...................
+    public NewHelperClassForPostAPI createHelperClass(){
+        NewHelperClassForPostAPI newHelperClassForPostAPI = new NewHelperClassForPostAPI();
+        newHelperClassForPostAPI.setName(regName.getEditText().getText().toString());
+        newHelperClassForPostAPI.setAddress(regUsername.getEditText().getText().toString());
+        newHelperClassForPostAPI.setState_Name(regEmail.getEditText().getText().toString());
+        newHelperClassForPostAPI.setPhone_number(regPhone.getEditText().getText().toString());
+       // newHelperClassForPostAPI.setDate(regPassword.getEditText().getText().toString());
+        return newHelperClassForPostAPI;
     }
 
-    public void saveUser(UserHelperClass userHelperClass){
-        Call<UserResponse> userResponseCall = ApiClient.getUserServies().saveUser(userHelperClass);
+    public void saveUser(NewHelperClassForPostAPI newHelperClassForPostAPI){
+        Call<UserResponse> userResponseCall = ApiClient.getUserServies().saveUser(newHelperClassForPostAPI);
         userResponseCall.enqueue(new Callback<UserResponse>() {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
@@ -144,7 +143,7 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
-
+    //Validation on registration form
 
     private boolean validationName() {
         String val = Objects.requireNonNull(regName.getEditText()).getText().toString();

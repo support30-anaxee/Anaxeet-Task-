@@ -1,13 +1,10 @@
 package com.example.aanaxee;
 
-public class UserResponse {
+public class NewHelperClassForPostAPI {
+        String name,address,phone_number,State_Name,Date;
+    public NewHelperClassForPostAPI(){
 
-    public String name;
-    public String address;
-    public String phone_number;
-    public String State_Name;
-    public String Date;
-
+    }
 
     public String getName() {
         return name;

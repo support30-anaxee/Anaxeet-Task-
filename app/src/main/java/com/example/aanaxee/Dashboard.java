@@ -27,6 +27,10 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     TextView fullNameLabel,userNameLabel;
     String user_username,user_name,user_email,user_phoneNo,user_password;
 
+//    private FrameLayout adContainerView;
+//    private AdView adView;
+
+
     //RelativeLayout business,payment1,bima,amazon,wp,portal,info,select,online,download;
 
     @SuppressLint({"UseSupportActionBar", "MissingInflatedId", "WrongViewCast"})
@@ -34,6 +38,25 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+//        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+//            @Override
+//            public void onInitializationComplete(InitializationStatus initializationStatus) {
+//            }
+//        });
+//
+//        adContainerView = findViewById(R.id.adView_container);
+//
+//        adView = new AdView(this);
+//        adContainerView.addView(adView);
+//
+//        adView = new AdView(this);
+//        adContainerView.addView(adView);
+//        adView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+//        loadBanner();
+//
+
+
 
 //        business = findViewById(R.id.business);
 //        payment1 = findViewById(R.id.payment1);
@@ -59,6 +82,33 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
 
     }
+
+//    private AdSize getAdSize() {
+//        Display display = getWindowManager().getDefaultDisplay();
+//        DisplayMetrics outMetrics = new DisplayMetrics();
+//        display.getMetrics(outMetrics);
+//
+//        float widthPixels = outMetrics.widthPixels;
+//        float density = outMetrics.density;
+//
+//        int adWidth = (int) (widthPixels / density);
+//
+//        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
+//    }
+//
+//    private void loadBanner() {
+//        AdRequest adRequest = new AdRequest.Builder()
+//                .addKeyword(AdRequest.DEVICE_ID_EMULATOR)
+//                .build();
+//
+//        AdSize adSize = getAdSize();
+//        // Set the adaptive ad size to the ad view.
+//        adView.setAdSize(adSize);
+//
+//        // Start loading the ad in the background.
+//        adView.loadAd(adRequest);
+//    }
+//
 
     @Override
     public void onBackPressed() {
